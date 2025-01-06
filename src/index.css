@@ -23,6 +23,16 @@ body {
     user-select: none;
 }
 
+.model-view {
+    transition: opacity 0.3s ease-out;
+    opacity: 1;
+  }
+  
+  .model-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
 canvas {
     touch-action: none;
 }

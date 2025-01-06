@@ -6,12 +6,13 @@ import IPhone from "./IPhone.jsx";
 import * as THREE from "three";
 import Loader from "./Loader.jsx";
 
-const ModelView = ({ index, groupRef, gsapType, controlRef, setRotationState, size, item }) => {
+const ModelView = ({ index, groupRef, gsapType, controlRef, setRotationState, size, item, style }) => {
     return (
         <View
             index={index}
             id={gsapType}
             className={`w-full h-full absolute ${index === 2 ? 'right-[-100%]' : ''}`}
+            style={style}
         >
             <ambientLight intensity={0.3} />
 

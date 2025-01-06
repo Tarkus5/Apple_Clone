@@ -61,7 +61,8 @@ const Model = () => {
                 <h1 id="heading" className="section-heading">Take a closer look.</h1>
                 <div className="flex flex-col items-center mt-5">
                     <div className="w-full h-[75vh] md:h-[90vh] overflow-hidden relative">
-                        <ModelView
+                        CIAOOOO
+                    <ModelView
                             index={1}
                             groupRef={small}
                             gsapType="view1"
@@ -69,6 +70,11 @@ const Model = () => {
                             setRotationState={setSmallRotation}
                             item={model}
                             size={size}
+                            style={{
+                                visibility: size === 'large' ? 'hidden' : 'visible',
+                                opacity: size === 'large' ? 0 : 1,
+                                transition: 'opacity 0.3s ease-out'
+                            }}
                         />
                         <ModelView
                             index={2}
@@ -78,6 +84,11 @@ const Model = () => {
                             setRotationState={setLargeRotation}
                             item={model}
                             size={size}
+                            style={{
+                                visibility: size === 'small' ? 'hidden' : 'visible',
+                                opacity: size === 'small' ? 0 : 1,
+                                transition: 'opacity 0.3s ease-out'
+                            }}
                         />
                         <Canvas
                             className="w-full h-full"
